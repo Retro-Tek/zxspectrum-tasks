@@ -17,7 +17,7 @@
 ;        ...
 ;       (SP-2*N) = arg #N
 ; Preserves F, BC', DE', HL', IY.
-start_argsN          IFUSED
+start_argsN         IFUSED
                     OR A
                     JR Z,start_args0
 
@@ -45,7 +45,7 @@ start_argsN          IFUSED
 ;        BC = task PC
 ;        DE = arg
 ; Preserves F, BC', DE', HL', IX, IY.
-start_args1          IFUSED
+start_args1         IFUSED
                     DEC HL
                     LD (HL),D
                     DEC HL
@@ -61,7 +61,7 @@ start_args1          IFUSED
 ; Input: HL = task SP
 ;        BC = task PC
 ; Preserves F, BC', DE', HL', IX, IY.
-start_args0          IFUSED
+start_args0         IFUSED
                     DEC HL
                     LD (HL),B
                     DEC HL
